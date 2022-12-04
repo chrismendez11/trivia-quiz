@@ -1,0 +1,22 @@
+.nav__section {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: $primary-color;
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $light-color;
+    }
+    .nav-img__container {
+        width: 60px;
+        height: 60px;
+    }
+    @include tl {
+        padding: 0 10%;
+    }
+}
+

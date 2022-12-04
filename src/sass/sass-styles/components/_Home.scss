@@ -1,0 +1,46 @@
+.home__page {
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding: 0 40px;
+    .home-main__section {
+        width: 100%;
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 40px;
+        background-color: $secondary-color;
+        h1 {
+            font-size: 4.8rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.6rem;
+            font-size: 500;
+            text-align: center;
+        }
+        button {
+            width: 200px;
+            height: 60px;
+        }
+    }
+    .madeBy__container {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+        span {
+            font-size: 1.6rem;
+            font-weight: 500;
+            a {
+                text-decoration-color: $feature-color;
+                color: black;
+                &:hover {
+                    text-decoration: none;
+                    color: $feature-color;
+                }
+            }
+        }
+    }
+}
