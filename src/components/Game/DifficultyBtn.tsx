@@ -19,7 +19,7 @@ const DifficultyBtn = ({difficulty, color}: Props) => {
     }
 
   return (
-    <button onClick={handleDifficulty} style={{backgroundColor: color}}>{difficulty}</button>
+    <button className='btn-option' onClick={handleDifficulty} style={{backgroundColor: color}}>{difficulty}</button>
   )
 }
 

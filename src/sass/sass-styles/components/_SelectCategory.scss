@@ -1,0 +1,114 @@
+.category__page {
+    padding: 0 20px 80px;
+    width: 100%;
+    height: auto;
+    @include ml {
+        height: calc(100vh - 60px);
+        padding: 0 20px;
+    }
+    .category__content {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .playerName__container {
+            background-color: $primary-color;
+            width: 100%;
+            height: 60px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: -2px 2px 8px -2px rgba(0,0,0,0.75);
+            h2 {
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: $light-color;
+                display: flex;
+                gap: 10px;
+                span {
+                    color: $feature-color;
+                }
+            }
+        }
+        .category-options__container {
+            background-color: $primary-color;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            height: auto;
+            border-radius: 20px;
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: -2px 2px 8px -2px rgba(0,0,0,0.75);
+            @include tl {
+                gap: 40px;
+                padding: 40px;
+            }
+            h2 {
+                font-size: 3.6rem;
+                font-weight: 800;
+                color: $light-color;
+                text-align: center;
+                @include tl {
+                    font-size: 4.8rem;
+                }
+            }
+            .category-img__container {
+                width: 100%;
+                max-width: 175px;
+                margin: 0 auto;
+                @include tl {
+                    max-width: 225px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $light-color;
+                @include ml {
+                    font-size: 2.0rem;
+                }
+                @include tl {
+                    font-size: 2.4rem;
+                }
+            }
+            .categories-btns__container {
+                width: 100%;
+                max-width: 679px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-auto-rows: 80px;
+                justify-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+.btn-option {
+    // width: 120px;
+    width: 100%;
+    max-width: 120px;
+    // height: 80px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: $light-color;
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.9;
+    }
+}

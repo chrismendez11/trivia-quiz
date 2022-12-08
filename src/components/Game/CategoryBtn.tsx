@@ -20,7 +20,7 @@ const CategoryBtn = ({category, color}: Props) => {
     }
 
   return (
-    <button onClick={handleCategory} style={{backgroundColor: color}}>{category.name}</button>
+    <button className='btn-option' onClick={handleCategory} style={{backgroundColor: color}}>{category.name}</button>
   )
 }
 

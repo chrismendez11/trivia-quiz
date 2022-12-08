@@ -5,18 +5,27 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background-color: $primary-color;
+    background-color: #001233;
     h2 {
         font-size: 2.4rem;
         font-weight: 600;
         color: $light-color;
+        @include tl {
+            font-size: 3.0rem;
+        }
+        @include lp {
+            font-size: 3.6rem;
+        }
     }
     .nav-img__container {
         width: 60px;
         height: 60px;
     }
     @include tl {
-        padding: 0 10%;
+        padding: 0 80px;
+    }
+    @include lp {
+        padding: 0 160px;
     }
 }
 

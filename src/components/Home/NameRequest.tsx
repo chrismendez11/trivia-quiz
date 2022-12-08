@@ -19,10 +19,10 @@ const NameRequest = () => {
 
   return (
     <div className='nameRequest__page'>
-      <section>
+      <section className='nameRequest__container'>
         <h2>TRIVIA QUIZ</h2>
         <p>Let's get started! Type your name to start.</p>
-        <form onSubmit={handleNameSubmit}>
+        <form onSubmit={handleNameSubmit} className='nameRequest__form'>
           <input type="text" id='name' />
           <button>START</button>
         </form>

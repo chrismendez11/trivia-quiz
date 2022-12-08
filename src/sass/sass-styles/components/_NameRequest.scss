@@ -1,4 +1,57 @@
 .nameRequest__page {
     width: 100%;
     height: 100vh;
+    .nameRequest__container {
+        width: 100%;
+        max-width: 500px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 150px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: -2px 4px 9px 0px rgba(0,0,0,0.75);
+        h2 {
+            font-size: 3.6rem;
+            font-weight: 800;
+            color: $light-color;
+        }
+        p {
+            font-size: 2.4rem;
+            font-size: 600;
+            color: $light-color;
+        }
+        .nameRequest__form {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            input {
+                width: 100%;
+                padding: 0 20px;
+                font-size: 2.4rem;
+                border-radius: 10px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                width: 200px;
+                height: 80px;
+                font-family: 'Exo 2', sans-serif;
+                font-style: italic;
+                font-size: 2.4rem;
+                font-weight: 800;
+                color: $light-color;
+                background-color: $feature-color;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $hover_feature-color;
+                }
+            }
+        }
+    }
 }
