@@ -54,12 +54,22 @@
             border: none;
             background-color: $feature-color;
             font-family: 'Exo 2', sans-serif;
+            font-style: italic;
+            transition: transform 200ms ease;
             &:hover {
                 background-color: $hover_feature-color;
+                transform: scale(1.03);
+                transition: transform 200ms ease;
             }
         }
         .home__img-container {
             width: 100%;
+            max-width: 550px;
+            border-radius: 20px;
+            img {
+                width: 100%;
+                border-radius: 20px;
+            }
         }
     }
     .madeBy__container {

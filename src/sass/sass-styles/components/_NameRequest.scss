@@ -48,8 +48,11 @@
                 border: none;
                 border-radius: 10px;
                 cursor: pointer;
+                transition: transform 200ms ease;
                 &:hover {
                     background-color: $hover_feature-color;
+                    transform: scale(1.03);
+                    transition: transform 200ms ease;
                 }
             }
         }

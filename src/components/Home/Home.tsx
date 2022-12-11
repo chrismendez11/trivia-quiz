@@ -10,7 +10,7 @@ const Home = () => {
       <section className='home-main__section'>
       <h1>TRIVIA QUIZ</h1>
       <div className='home__img-container'>
-        <img src="https://appsgeyser.com/blog/wp-content/uploads/2020/09/Artboard-12-2.png" alt="" />
+        <img src="https://media.discordapp.net/attachments/1034322391893020683/1051299718866665552/TriviaVideo.gif" alt="" />
       </div>
       <p>Trivia Quiz is a game where you can put into practice your knowledge in different areas like sports, games or just general knowledge.</p>
       <p>¡Click on the button to start!</p>

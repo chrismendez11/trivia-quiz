@@ -112,7 +112,10 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 200ms ease;
     &:hover {
         opacity: 0.9;
+        transform: scale(1.03);
+        transition: transform 200ms ease;
     }
 }

@@ -126,12 +126,22 @@ img {
   border: none;
   background-color: #ffb703;
   font-family: "Exo 2", sans-serif;
+  font-style: italic;
+  transition: transform 200ms ease;
 }
 .home__page .home-main__section button:hover {
   background-color: #ffc226;
+  transform: scale(1.03);
+  transition: transform 200ms ease;
 }
 .home__page .home-main__section .home__img-container {
   width: 100%;
+  max-width: 550px;
+  border-radius: 20px;
+}
+.home__page .home-main__section .home__img-container img {
+  width: 100%;
+  border-radius: 20px;
 }
 .home__page .madeBy__container {
   display: flex;
@@ -205,9 +215,12 @@ img {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: transform 200ms ease;
 }
 .nameRequest__page .nameRequest__container .nameRequest__form button:hover {
   background-color: #ffc226;
+  transform: scale(1.03);
+  transition: transform 200ms ease;
 }
 
 .category__page {
@@ -334,9 +347,12 @@ img {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: transform 200ms ease;
 }
 .btn-option:hover {
   opacity: 0.9;
+  transform: scale(1.03);
+  transition: transform 200ms ease;
 }
 
 .quiz__page {
