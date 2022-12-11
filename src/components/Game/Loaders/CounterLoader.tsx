@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 
-const CounterLoader = () => {
+type Props = {
+  counter: number | undefined
+}
 
-    const [counter, setCounter] = useState<number>(3)
+const CounterLoader = ({ counter }: Props) => {
 
   return (
-    <div>
-        <span></span>
+    <div className='counter__page'>
+      <div className='counter__container'>
+      <div className="loader">
+        <span className='counter'>{counter}</span>
+      </div>
+      </div>
     </div>
   )
 }

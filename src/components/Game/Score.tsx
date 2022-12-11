@@ -29,13 +29,16 @@ const Score = () => {
   }
 
   return (
-    <div>
-      <span>{name}</span>
-      <h2>Score:</h2>
-      <span>{score}/{totalScore}</span>
-      <div>
-        <button onClick={handlePlayAgain}>Play again!</button>
-        <button onClick={handleBackMenu}>Back to main menu!</button>
+    <div className='score__page'>
+      <div className='playerName__container'>
+        <h2>Player: <span>{name}</span></h2>
+      </div>
+      <div className='score__container'>
+        <h2>TRIVIA QUIZ</h2>
+        <p>Your score was:</p>
+        <span><span>{score}</span>/{totalScore}</span>
+        <button className='playAgain__btn' onClick={handlePlayAgain}>Play again</button>
+        <button className='menu__btn' onClick={handleBackMenu}>Back to main menu</button>
       </div>
     </div>
   )

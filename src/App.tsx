@@ -10,6 +10,7 @@ import SelectCategory from './components/Game/SelectCategory'
 import './sass/css/index.css'
 import ProtectedRoutes from './components/Home/ProtectedRoutes'
 import QuizGame from './components/Game/QuizGame'
+import DataLoader from './components/Game/Loaders/DataLoader'
 
 function App() {
 

@@ -19,7 +19,7 @@ const SelectCategory = () => {
         <section className='category-options__container'>
         <h2>TRIVIA QUIZ</h2>
         <div className='category-img__container'><img src="https://www.triviamaker.com/TriviaMaker/Theme/v4/WOF/wheellogo.png" alt="" /></div>
-        <p>Select the category for the quiz</p>
+        <p>Select the <span>category</span> for the quiz</p>
         <div className='categories-btns__container'>  
           {api.categories.map((category: Category, index) => (
             <CategoryBtn key={index} category={category} color={colors[index]}/>

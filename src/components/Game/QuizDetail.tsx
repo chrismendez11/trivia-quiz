@@ -6,81 +6,85 @@ import { incrementTotalByBoolean, incrementTotalByChoice } from '../../store/sli
 import { Quiz } from '../../types'
 
 type Props = {
-  quizzes: Quiz[]|undefined,
+  quizzes: Quiz[] | undefined,
   currentQuiz: number
 }
 
-const QuizDetail = ({quizzes, currentQuiz}: Props) => {
+const QuizDetail = ({ quizzes, currentQuiz }: Props) => {
 
-    const name = useSelector((state: RootState) => state.username)
+  const name = useSelector((state: RootState) => state.username)
+  const colors = ["#ba181b", "#0466c8", "#52b788", "#ffd60a"]
 
-    const [answers, setAnswers] = useState<Array<string>>([])
-    const [displayAnswerMsg, setDisplayAnswerMsg] = useState<string>('')
+  const [answers, setAnswers] = useState<Array<string>>([])
+  const [displayAnswerMsg, setDisplayAnswerMsg] = useState<string>('')
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-    const handleAnswers = () => {
-      const randomIndex = Math.floor(Math.random() * quizzes![currentQuiz].incorrect_answers.length)
-      quizzes![currentQuiz].incorrect_answers.splice(randomIndex, 0, quizzes![currentQuiz].correct_answer)
-      setAnswers(quizzes![currentQuiz].incorrect_answers)
-    }
+  const handleAnswers = () => {
+    const randomIndex = Math.floor(Math.random() * quizzes![currentQuiz].incorrect_answers.length)
+    quizzes![currentQuiz].incorrect_answers.splice(randomIndex, 0, quizzes![currentQuiz].correct_answer)
+    setAnswers(quizzes![currentQuiz].incorrect_answers)
+  }
 
-    useEffect(() => {
-      handleAnswers()
-      const answerBtns: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.answer_btn')
-      answerBtns.forEach((btn: HTMLButtonElement) => {
-        btn.disabled = false;
-      });
-      setDisplayAnswerMsg('')
-    }, [currentQuiz])
+  useEffect(() => {
+    handleAnswers()
+    const answerBtns: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.answer_btn')
+    answerBtns.forEach((btn: HTMLButtonElement) => {
+      btn.disabled = false;
+    });
+    setDisplayAnswerMsg('')
+  }, [currentQuiz])
 
-    const handleAnswer = (e: any) => {
-      if (quizzes![currentQuiz].correct_answer == 'True' || quizzes![currentQuiz].correct_answer == 'False') {
-        if (e.target.textContent === quizzes![currentQuiz].correct_answer) {
-          dispatch(incrementByBoolean())
-          setDisplayAnswerMsg('Correct')
-        } else {
-          setDisplayAnswerMsg('Incorrect')
-        }
-        dispatch(incrementTotalByBoolean())
+  const handleAnswer = (e: any) => {
+    if (quizzes![currentQuiz].correct_answer == 'True' || quizzes![currentQuiz].correct_answer == 'False') {
+      if (e.target.textContent === quizzes![currentQuiz].correct_answer) {
+        dispatch(incrementByBoolean())
+        setDisplayAnswerMsg('Correct')
       } else {
-        if (e.target.textContent === quizzes![currentQuiz].correct_answer) {
-          dispatch(incrementByChoice())
-          setDisplayAnswerMsg('Correct')
-        } else {
-          setDisplayAnswerMsg('Incorrect')
-        }
-        dispatch(incrementTotalByChoice())
+        setDisplayAnswerMsg('Incorrect')
       }
-      const answerBtns: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.answer_btn')
-      answerBtns.forEach((btn: HTMLButtonElement) => {
-        btn.disabled = true;
-      });
+      dispatch(incrementTotalByBoolean())
+    } else {
+      if (e.target.textContent === quizzes![currentQuiz].correct_answer) {
+        dispatch(incrementByChoice())
+        setDisplayAnswerMsg('Correct')
+      } else {
+        setDisplayAnswerMsg('Incorrect')
+      }
+      dispatch(incrementTotalByChoice())
     }
+    const answerBtns: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.answer_btn')
+    answerBtns.forEach((btn: HTMLButtonElement) => {
+      btn.disabled = true;
+    });
+  }
 
   return (
-    <section className='quiz-detail__container'>
-        <div>
-            <h3>Player: <span>{name}</span></h3>
-            <h3>Question: {currentQuiz + 1}<span></span></h3>
-        </div>
+    <>
+      <div className='playerNameQuestion__container'>
+        <h2>Player: <span>{name}</span></h2>
+        <h2>Question: <span>{currentQuiz + 1}</span></h2>
+      </div>
+      <section className='quiz-detail__container'>
         <h2>Trivia Quiz</h2>
-        <div>
-          <h3>Category: {quizzes![currentQuiz].category}</h3>
-          <h3>Difficulty: {quizzes![currentQuiz].difficulty}</h3>
+        <div className='category-difficulty__container'>
+          <h3>Category: <span>{quizzes![currentQuiz].category}</span></h3>
+          <h3>Difficulty: <span>{quizzes![currentQuiz].difficulty}</span></h3>
         </div>
-        <div>
-          <p>Question: {quizzes![currentQuiz].question}</p>
+        <div className='question__container'>
+          <p>Question: <span>{quizzes![currentQuiz].question}</span></p>
         </div>
-        <div>
-          <h2>ANSWERS</h2>
-          {answers.map(answer => (
-            <button key={answer} onClick={(e) => handleAnswer(e)} className='answer_btn'>{answer}</button>
+        <div className='answers-btn__container'>
+          {answers.map((answer, index) => (
+            <button key={answer} onClick={(e) => handleAnswer(e)} className='answer_btn' style={{ backgroundColor: colors[index] }}>{answer}</button>
           ))}
-          {displayAnswerMsg === 'Correct' && <span>¡{displayAnswerMsg} Answer!</span>}
-          {displayAnswerMsg === 'Incorrect' && <span>{displayAnswerMsg} Answer :(</span> }
         </div>
-    </section>
+        <div className='answer-msg__container'>
+          {displayAnswerMsg === 'Correct' && <span style={{color: "#2dc653"}}>¡{displayAnswerMsg} Answer!</span>}
+          {displayAnswerMsg === 'Incorrect' && <span style={{color: "#dc2f02"}}>{displayAnswerMsg} Answer :(</span>}
+        </div>
+      </section>
+    </>
   )
 }
 

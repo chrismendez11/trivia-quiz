@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import api from '../../api'
 import { RootState } from '../../store'
 import { Quiz } from '../../types'
+import CounterLoader from './Loaders/CounterLoader'
+import DataLoader from './Loaders/DataLoader'
 import QuizDetail from './QuizDetail'
 
 const QuizGame = () => {
@@ -67,12 +69,16 @@ const QuizGame = () => {
   console.log(quizzes)
 
   return (
-    <div className='quiz__container'>
-      {isDataLoading && <h2>loading...</h2>}
-      {Boolean(counter) && <span>{counter}</span>}
+    <div className='quiz__page'>
+      {isDataLoading && <DataLoader />}
+      {Boolean(counter) && <CounterLoader counter={counter} />}
+      <div className='quiz-detail__content'>
       {sendQuiz && <QuizDetail quizzes={quizzes} currentQuiz={currentQuiz}/>}
-      {sendQuiz && currentQuiz < quizzes!.length - 1 && <button onClick={handleCurrentQuiz}>Next Question</button>}
-      {quizzes && currentQuiz === quizzes!.length - 1  && <button onClick={handleFinishQuizz}>Finish Quiz</button>}
+      <div className='next-questions__containers'>
+      {sendQuiz && currentQuiz < quizzes!.length - 1 && <button onClick={handleCurrentQuiz}>Next question <i className="fa-solid fa-arrow-right"></i></button>}
+      {quizzes && currentQuiz === quizzes!.length - 1  && <button onClick={handleFinishQuizz}>Finish quiz <i className="fa-solid fa-arrow-right"></i></button>}
+      </div>
+      </div>
     </div>
   )
 }
