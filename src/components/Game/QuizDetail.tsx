@@ -33,6 +33,7 @@ const QuizDetail = ({ quizzes, currentQuiz }: Props) => {
       btn.disabled = false;
     });
     setDisplayAnswerMsg('')
+    handleSetQuestion()
   }, [currentQuiz])
 
   const handleAnswer = (e: any) => {
@@ -59,6 +60,10 @@ const QuizDetail = ({ quizzes, currentQuiz }: Props) => {
     });
   }
 
+  const handleSetQuestion = () => {
+    document.getElementById('question')!.innerHTML = quizzes![currentQuiz].question
+  }
+
   return (
     <>
       <div className='playerNameQuestion__container'>
@@ -72,7 +77,7 @@ const QuizDetail = ({ quizzes, currentQuiz }: Props) => {
           <h3>Difficulty: <span>{quizzes![currentQuiz].difficulty}</span></h3>
         </div>
         <div className='question__container'>
-          <p>Question: <span>{quizzes![currentQuiz].question}</span></p>
+          <p>Question: <span id='question'></span></p>
         </div>
         <div className='answers-btn__container'>
           {answers.map((answer, index) => (
