@@ -23,7 +23,7 @@ const NameRequest = () => {
         <h2>TRIVIA QUIZ</h2>
         <p>Let's get started! Type your name to start.</p>
         <form onSubmit={handleNameSubmit} className='nameRequest__form'>
-          <input type="text" id='name' />
+          <input type="text" id='name' placeholder='Your name...'/>
           <button>START</button>
         </form>
       </section>

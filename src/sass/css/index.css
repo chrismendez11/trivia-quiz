@@ -16,45 +16,42 @@ img {
 }
 
 .App {
-  background-color: #001845;
+  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(255, 183, 3) 100%);
 }
 
 .nav__section {
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 15px;
   align-items: center;
   padding: 0 5%;
-  background-color: #001233;
 }
 .nav__section h2 {
   font-size: 2.4rem;
-  font-weight: 600;
-  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #000000;
 }
 @media (min-width: 768px) {
   .nav__section h2 {
     font-size: 3rem;
   }
 }
-@media (min-width: 1024px) {
-  .nav__section h2 {
-    font-size: 3.6rem;
-  }
-}
 .nav__section .nav-img__container {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .nav__section .nav-img__container {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media (min-width: 768px) {
   .nav__section {
     padding: 0 80px;
-  }
-}
-@media (min-width: 1024px) {
-  .nav__section {
-    padding: 0 160px;
   }
 }
 
@@ -84,14 +81,14 @@ img {
   margin-top: 50px;
   padding: 40px;
   gap: 20px;
-  background-color: #023e7d;
-  border-radius: 20px;
+  background-color: white;
   box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
 }
 .home__page .home-main__section h1 {
   font-size: 2.4rem;
-  font-weight: 900;
-  color: white;
+  font-weight: 500;
+  color: #000000;
+  text-shadow: 2px 2px #ffb703;
 }
 @media (min-width: 425px) {
   .home__page .home-main__section h1 {
@@ -110,19 +107,19 @@ img {
 }
 .home__page .home-main__section p {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   line-height: 20px;
-  color: white;
+  color: #000000;
 }
 .home__page .home-main__section button {
   cursor: pointer;
-  width: 200px;
-  height: 80px;
-  font-size: 3rem;
+  width: 180px;
+  height: 60px;
+  font-size: 2.4rem;
   font-weight: 800;
   color: white;
-  border-radius: 10px;
+  border-radius: 100px;
   border: none;
   background-color: #ffb703;
   font-family: "Exo 2", sans-serif;
@@ -130,18 +127,19 @@ img {
   transition: transform 200ms ease;
 }
 .home__page .home-main__section button:hover {
-  background-color: #ffc226;
-  transform: scale(1.03);
+  background-color: #ffb703;
+  color: white;
+  transform: scale(1.02);
   transition: transform 200ms ease;
 }
 .home__page .home-main__section .home__img-container {
   width: 100%;
   max-width: 550px;
-  border-radius: 20px;
+  box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
 }
 .home__page .home-main__section .home__img-container img {
   width: 100%;
-  border-radius: 20px;
+  box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
 }
 .home__page .madeBy__container {
   display: flex;
@@ -150,12 +148,12 @@ img {
 }
 .home__page .madeBy__container span {
   font-size: 1.6rem;
-  font-weight: 600;
-  color: white;
+  font-weight: 500;
+  color: #000000;
 }
 .home__page .madeBy__container span a {
   text-decoration-color: #ffb703;
-  color: white;
+  color: #000000;
 }
 .home__page .madeBy__container span a:hover {
   text-decoration: none;
@@ -168,12 +166,11 @@ img {
 }
 .nameRequest__page .nameRequest__container {
   width: 100%;
-  max-width: 500px;
-  background-color: #023e7d;
-  border-radius: 10px;
+  max-width: 600px;
+  background-color: white;
   margin: 0 auto;
   margin-top: 150px;
-  padding: 20px;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -181,13 +178,13 @@ img {
 }
 .nameRequest__page .nameRequest__container h2 {
   font-size: 3.6rem;
-  font-weight: 800;
-  color: white;
+  font-weight: 500;
+  color: #000000;
 }
 .nameRequest__page .nameRequest__container p {
   font-size: 2.4rem;
-  font-size: 600;
-  color: white;
+  font-weight: 400;
+  color: #000000;
 }
 .nameRequest__page .nameRequest__container .nameRequest__form {
   width: 100%;
@@ -198,7 +195,9 @@ img {
   width: 100%;
   padding: 0 20px;
   font-size: 2.4rem;
-  border-radius: 10px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 .nameRequest__page .nameRequest__container .nameRequest__form input:focus {
   outline: none;
@@ -213,7 +212,7 @@ img {
   color: white;
   background-color: #ffb703;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   transition: transform 200ms ease;
 }
@@ -244,10 +243,9 @@ img {
   gap: 40px;
 }
 .category__page .category__content .playerName__container {
-  background-color: #023e7d;
+  background-color: white;
   width: 100%;
   height: 60px;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -255,8 +253,8 @@ img {
 }
 .category__page .category__content .playerName__container h2 {
   font-size: 2.4rem;
-  font-weight: 700;
-  color: white;
+  font-weight: 600;
+  color: #000000;
   display: flex;
   gap: 10px;
 }
@@ -264,12 +262,11 @@ img {
   color: #ffb703;
 }
 .category__page .category__content .category-options__container {
-  background-color: #023e7d;
+  background-color: white;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   height: auto;
-  border-radius: 20px;
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
@@ -284,8 +281,8 @@ img {
 }
 .category__page .category__content .category-options__container h2 {
   font-size: 3.6rem;
-  font-weight: 800;
-  color: white;
+  font-weight: 600;
+  color: #000000;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -308,8 +305,8 @@ img {
 }
 .category__page .category__content .category-options__container p {
   font-size: 1.8rem;
-  font-weight: 600;
-  color: white;
+  font-weight: 500;
+  color: #000000;
 }
 @media (min-width: 425px) {
   .category__page .category__content .category-options__container p {
@@ -323,7 +320,7 @@ img {
 }
 .category__page .category__content .category-options__container p span {
   color: #ffb703;
-  font-weight: 700;
+  font-weight: 600;
 }
 .category__page .category__content .category-options__container .categories-btns__container {
   width: 100%;
@@ -344,7 +341,7 @@ img {
   font-family: "Exo 2", sans-serif;
   font-style: italic;
   border: none;
-  border-radius: 10px;
+  box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   transition: transform 200ms ease;
 }
@@ -369,12 +366,11 @@ img {
 .quiz__page .next-questions__containers button {
   width: 240px;
   height: auto;
-  background-color: #023e7d;
+  background-color: white;
   border: none;
-  border-radius: 20px;
   font-size: 2.4rem;
   font-weight: 600;
-  color: white;
+  color: #000000;
   padding: 20px 10px;
   display: flex;
   justify-content: center;
@@ -403,10 +399,9 @@ img {
   margin-top: 50px;
 }
 .quiz-detail__content .playerNameQuestion__container {
-  background-color: #023e7d;
+  background-color: white;
   width: 100%;
   height: auto;
-  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -417,22 +412,21 @@ img {
 }
 .quiz-detail__content .playerNameQuestion__container h2 {
   font-size: 2.4rem;
-  font-weight: 600;
-  color: white;
+  font-weight: 500;
+  color: #000000;
   display: flex;
   gap: 10px;
 }
 .quiz-detail__content .playerNameQuestion__container h2 span {
   color: #ffb703;
-  font-weight: 700;
+  font-weight: 600;
 }
 .quiz-detail__content .quiz-detail__container {
-  background-color: #023e7d;
+  background-color: white;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   height: auto;
-  border-radius: 20px;
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
@@ -447,8 +441,8 @@ img {
 }
 .quiz-detail__content .quiz-detail__container h2 {
   font-size: 3.2rem;
-  font-weight: 800;
-  color: white;
+  font-weight: 500;
+  color: #000000;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -465,16 +459,16 @@ img {
 .quiz-detail__content .quiz-detail__container .category-difficulty__container h3 {
   font-size: 2.4rem;
   font-weight: 600;
-  color: white;
+  color: #000000;
 }
 .quiz-detail__content .quiz-detail__container .category-difficulty__container h3 span {
   color: #ffb703;
-  font-weight: 700;
+  font-weight: 500;
 }
 .quiz-detail__content .quiz-detail__container .question__container p {
   font-size: 2.4rem;
   font-weight: 600;
-  color: white;
+  color: #000000;
 }
 .quiz-detail__content .quiz-detail__container .question__container p span {
   font-weight: 500;
@@ -493,13 +487,13 @@ img {
 }
 .quiz-detail__content .quiz-detail__container .answers-btn__container .answer_btn {
   width: 100%;
+  box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   color: white;
   font-family: "Exo 2", sans-serif;
   font-style: italic;
   border: none;
-  border-radius: 10px;
   padding: 20px 10px;
   cursor: pointer;
   transition: transform 200ms ease;
@@ -515,7 +509,7 @@ img {
 }
 .quiz-detail__content .quiz-detail__container .answer-msg__container span {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .loader__page {
@@ -561,7 +555,7 @@ img {
 }
 
 #wifi-loader svg circle.front {
-  stroke: #ffb703;
+  stroke: #009ea5;
 }
 
 #wifi-loader svg.circle-outer {
@@ -636,7 +630,7 @@ img {
 }
 
 #wifi-loader .text::after {
-  color: #ffb703;
+  color: #009ea5;
   animation: text-animation76 3.6s ease infinite;
   position: absolute;
   left: 0;
@@ -713,13 +707,12 @@ img {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 80px;
 }
 .score__page .playerName__container {
-  background-color: #023e7d;
+  background-color: white;
   width: 100%;
   height: auto;
-  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -730,23 +723,22 @@ img {
 }
 .score__page .playerName__container h2 {
   font-size: 2.4rem;
-  font-weight: 600;
-  color: white;
+  font-weight: 500;
+  color: #000000;
   display: flex;
   gap: 10px;
 }
 .score__page .playerName__container h2 span {
   color: #ffb703;
-  font-weight: 700;
+  font-weight: 600;
 }
 .score__page .score__container {
-  background-color: #023e7d;
+  background-color: white;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   height: auto;
-  border-radius: 20px;
-  padding: 20px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -760,18 +752,18 @@ img {
 }
 .score__page .score__container h2 {
   font-size: 4.8rem;
-  font-weight: 800;
-  color: white;
+  font-weight: 700;
+  color: #000000;
 }
 .score__page .score__container p {
   font-size: 2.4rem;
   font-weight: 600;
-  color: white;
+  color: #009ea5;
 }
 .score__page .score__container span {
   font-size: 4.8rem;
-  font-weight: 800;
-  color: white;
+  font-weight: 700;
+  color: #009ea5;
 }
 .score__page .score__container span span {
   color: #ffb703;
@@ -784,9 +776,9 @@ img {
   width: 160px;
   height: 60px;
   border: none;
-  border-radius: 10px;
   font-size: 2.4rem;
   font-weight: 600;
+  box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
   transition: transform 200ms ease;
   background-color: #ba181b;
   color: white;
@@ -802,9 +794,9 @@ img {
   cursor: pointer;
   margin: 0 auto;
   width: 180px;
+  box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
   height: 70px;
   border: none;
-  border-radius: 10px;
   font-size: 2.4rem;
   font-weight: 600;
   transition: transform 200ms ease;

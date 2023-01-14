@@ -18,7 +18,7 @@ const SelectDifficulty = () => {
         </div>
         <section className='category-options__container'>
         <h2>TRIVIA QUIZ</h2>
-        <div className='category-img__container'><img src="https://www.triviamaker.com/TriviaMaker/Theme/v4/WOF/wheellogo.png" alt="" /></div>
+        <div className='category-img__container'><img src="https://media4.giphy.com/media/3ornjZFNEz3sEh9HcA/giphy.gif?cid=790b7611dd8bd2daaead555b19510ec0e41da081dc1657a7&rid=giphy.gif&ct=g" alt="" /></div>
         <p>Select the <span>difficulty</span> for the quiz</p>
         <div className='categories-btns__container'>  
           {api.difficulties.map((difficulty: Difficulty, index) => (

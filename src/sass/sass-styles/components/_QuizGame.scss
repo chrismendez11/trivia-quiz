@@ -11,12 +11,12 @@
         button {
             width: 240px;
             height: auto;
-            background-color: $primary-color;
+            background-color: $light-color;
             border: none;
-            border-radius: 20px;
+            // border-radius: 20px;
             font-size: 2.4rem;
             font-weight: 600;
-            color: $light-color;
+            color: $dark-color;
             padding: 20px 10px;
             display: flex;
             justify-content: center;

@@ -3,25 +3,24 @@
     height: 100vh;
     .nameRequest__container {
         width: 100%;
-        max-width: 500px;
-        background-color: $primary-color;
-        border-radius: 10px;
+        max-width: 600px;
+        background-color: $light-color;
         margin: 0 auto;
         margin-top: 150px;
-        padding: 20px;
+        padding: 30px 40px;
         display: flex;
         flex-direction: column;
         gap: 20px;
         box-shadow: -2px 4px 9px 0px rgba(0,0,0,0.75);
         h2 {
             font-size: 3.6rem;
-            font-weight: 800;
-            color: $light-color;
+            font-weight: 500;
+            color: $dark-color;
         }
         p {
             font-size: 2.4rem;
-            font-size: 600;
-            color: $light-color;
+            font-weight: 400;
+            color: $dark-color;
         }
         .nameRequest__form {
             width: 100%;
@@ -31,7 +30,9 @@
                 width: 100%;
                 padding: 0 20px;
                 font-size: 2.4rem;
-                border-radius: 10px;
+                font-weight: 500;
+                border-radius: 5px;
+                border: 1px solid black;
                 &:focus {
                     outline: none;
                 }
@@ -46,7 +47,7 @@
                 color: $light-color;
                 background-color: $feature-color;
                 border: none;
-                border-radius: 10px;
+                border-radius: 5px;
                 cursor: pointer;
                 transition: transform 200ms ease;
                 &:hover {

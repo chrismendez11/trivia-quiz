@@ -9,10 +9,10 @@
     margin-top: 50px;
 
     .playerNameQuestion__container {
-        background-color: $primary-color;
+        background-color: $light-color;
         width: 100%;
         height: auto;
-        border-radius: 20px;
+        // border-radius: 20px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -23,25 +23,25 @@
 
         h2 {
             font-size: 2.4rem;
-            font-weight: 600;
-            color: $light-color;
+            font-weight: 500;
+            color: $dark-color;
             display: flex;
             gap: 10px;
 
             span {
                 color: $feature-color;
-                font-weight: 700;
+                font-weight: 600;
             }
         }
     }
 
     .quiz-detail__container {
-        background-color: $primary-color;
+        background-color: $light-color;
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
         height: auto;
-        border-radius: 20px;
+        // border-radius: 20px;
         padding: 20px 40px;
         display: flex;
         flex-direction: column;
@@ -55,10 +55,9 @@
 
         h2 {
             font-size: 3.2rem;
-            font-weight: 800;
-            color: $light-color;
+            font-weight: 500;
+            color: $dark-color;
             text-align: center;
-
             @include tl {
                 font-size: 4.2rem;
             }
@@ -73,11 +72,11 @@
             h3 {
                 font-size: 2.4rem;
                 font-weight: 600;
-                color: $light-color;
+                color: $dark-color;
 
                 span {
                     color: $feature-color;
-                    font-weight: 700;
+                    font-weight: 500;
                 }
             }
         }
@@ -86,7 +85,7 @@
             p {
                 font-size: 2.4rem;
                 font-weight: 600;
-                color: $light-color;
+                color: $dark-color;
 
                 span {
                     font-weight: 500;
@@ -107,14 +106,15 @@
             .answer_btn {
                 // width: 120px;
                 width: 100%;
+                box-shadow: -2px 2px 8px -2px rgba(0, 0, 0, 0.75);
                 // height: 80px;
                 font-size: 1.8rem;
-                font-weight: 800;
+                font-weight: 700;
                 color: $light-color;
                 font-family: 'Exo 2', sans-serif;
                 font-style: italic;
                 border: none;
-                border-radius: 10px;
+                // border-radius: 10px;
                 padding: 20px 10px;
                 cursor: pointer;
                 transition: transform 200ms ease;
@@ -130,7 +130,7 @@
             justify-content: center;
             span {
                 font-size: 2.4rem;
-                font-weight: 600;
+                font-weight: 500;
             }
         }
     }

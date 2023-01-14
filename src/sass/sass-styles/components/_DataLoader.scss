@@ -43,7 +43,7 @@
   }
   
   #wifi-loader svg circle.front {
-    stroke: $feature-color;
+    stroke: $primary-color;
   }
   
   #wifi-loader svg.circle-outer {
@@ -118,7 +118,7 @@
   }
   
   #wifi-loader .text::after {
-    color: $feature-color;
+    color: $primary-color;
     animation: text-animation76 3.6s ease infinite;
     position: absolute;
     left: 0;
